@@ -8,7 +8,7 @@ internal class Program
         Validation validation = new Validation();
         validation.ValidatePassword("7Eg23yhuj");
         validation.ValidatePassword("123456ABC");
-        validation.ValidatePassword("1234567");
+        validation.ValidatePassword("a2345AB");
         
     }
 }
