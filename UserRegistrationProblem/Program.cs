@@ -6,9 +6,8 @@ internal class Program
     {
         Console.WriteLine("Welcome To User Validation Program!");
         Validation validation = new Validation();
-        validation.ValidateEmail("Shrikant.xyz@bridgelabz.co.in");
-        validation.ValidateEmail("om@gmail.com");
-        validation.ValidateEmail("sai123@gmail");
+        validation.ValidateMobileNumber("7743840611");
+        validation.ValidateMobileNumber("123456");
         
     }
 }
