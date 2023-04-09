@@ -6,9 +6,11 @@ internal class Program
     {
         Console.WriteLine("Welcome To User Validation Program!");
         Validation validation = new Validation();
-        validation.ValidatePassword("7Eg23_yhuj");
-        validation.ValidatePassword("cdf_eert12");
-        validation.ValidatePassword("Shrikant@0611");
-        
+        string[] email = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc11@abc.net", "abc-100@abc.net", "abc.100@abc.com.au", "abc@" };
+        foreach (string emailItem in email)
+        {
+            validation.ValidateEmail(emailItem);
+        }
+
     }
 }
