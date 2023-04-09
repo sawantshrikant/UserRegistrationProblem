@@ -7,48 +7,37 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProblem
 {
-    internal class Validation
+    public class Validation
     {
         public static string FIRST_NAME = "^[A-Z]{1}[a-z]{2,}$";
-        public static string SECOND_NAME = "^[A-Z]{1}[a-z]{2,}$";
-        public static string E_MAIL = "^[0-9A-Za-z]+[.+-_]{0,1}[0-9A-Za-z]+[@][]A-Za-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
+        public static string LAST_NAME = "^[A-Z]{1}[a-z]{2,}$";
+        public static string E_MAIL = "^[0-9A-Za-z]+[.+-_]{0,1}[0-9A-Za-z]+[@][A-Za-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
         public static string MOBILE_NUMBER = "^[6-9]{1}[0-9]{9}$";
-        public static string PASSWORD = "^(?=[a-zA-Z0-9#@$?-_]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$";
-        public void ValidateFirstName(string name)
+        public static string PASSWORD = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$";
+
+        public bool ValidateFirstName(string name)
         {
-            if (Regex.IsMatch(name, FIRST_NAME))
-                Console.WriteLine("Valid first name");
-            else
-                Console.WriteLine("Invalid first name");
-        }
-        public void ValidateSecondName(string name)
-        {
-            if (Regex.IsMatch(name, SECOND_NAME))
-                Console.WriteLine("Valid second name");
-            else
-                Console.WriteLine("Invalid second name");
-        }
-        public void ValidateEmail(string eMail)
-        {
-            if (Regex.IsMatch(eMail, E_MAIL))
-                Console.WriteLine("Valid Email");
-            else
-                Console.WriteLine("Invalid Email");
-        }
-        public void ValidateMobileNumber(string number)
-        {
-            if (Regex.IsMatch(number, MOBILE_NUMBER))
-                Console.WriteLine("Valid Mobile Number");
-            else
-                Console.WriteLine("Invalid Mobile Number");
-        }
-        public void ValidatePassword(string Password)
-        {
-            if (Regex.IsMatch(Password, PASSWORD))
-                Console.WriteLine("Valid Password");
-            else
-                Console.WriteLine("Invalid Password");
+            return Regex.IsMatch(name, FIRST_NAME);
         }
 
+        public bool ValidateLastName(string name)
+        {
+            return Regex.IsMatch(name, LAST_NAME);
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            return Regex.IsMatch(email, E_MAIL);
+        }
+
+        public bool ValidateMobileNumber(string number)
+        {
+            return Regex.IsMatch(number, MOBILE_NUMBER);
+        }
+
+        public bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, PASSWORD);
+        }
     }
 }
