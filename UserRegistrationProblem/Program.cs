@@ -6,8 +6,9 @@ internal class Program
     {
         Console.WriteLine("Welcome To User Validation Program!");
         Validation validation = new Validation();
-        validation.ValidateMobileNumber("7743840611");
-        validation.ValidateMobileNumber("123456");
+        validation.ValidatePassword("7Eg23yhuj");
+        validation.ValidatePassword("123456ABC");
+        validation.ValidatePassword("1234567");
         
     }
 }

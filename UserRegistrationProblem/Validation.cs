@@ -13,6 +13,7 @@ namespace UserRegistrationProblem
         public static string SECOND_NAME = "^[A-Z]{1}[a-z]{2,}$";
         public static string E_MAIL = "^[0-9A-Za-z]+[.+-_]{0,1}[0-9A-Za-z]+[@][]A-Za-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
         public static string MOBILE_NUMBER = "^[6-9]{1}[0-9]{9}$";
+        public static string PASSWORD = "^[0-9A-Za-z]{8,}$";
         public void ValidateFirstName(string name)
         {
             if (Regex.IsMatch(name, FIRST_NAME))
@@ -40,6 +41,13 @@ namespace UserRegistrationProblem
                 Console.WriteLine("Valid Mobile Number");
             else
                 Console.WriteLine("Invalid Mobile Number");
+        }
+        public void ValidatePassword(string Password)
+        {
+            if (Regex.IsMatch(Password, PASSWORD))
+                Console.WriteLine("Valid Password");
+            else
+                Console.WriteLine("Invalid Password");
         }
 
     }
