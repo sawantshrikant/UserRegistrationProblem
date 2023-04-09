@@ -6,9 +6,9 @@ internal class Program
     {
         Console.WriteLine("Welcome To User Validation Program!");
         Validation validation = new Validation();
-        validation.ValidatePassword("7Eg23yhuj");
-        validation.ValidatePassword("123456ABC");
-        validation.ValidatePassword("a2345AB");
+        validation.ValidatePassword("7Eg23_yhuj");
+        validation.ValidatePassword("cdf_eert12");
+        validation.ValidatePassword("Shrikant@0611");
         
     }
 }
