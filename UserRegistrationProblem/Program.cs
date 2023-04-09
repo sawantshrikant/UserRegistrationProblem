@@ -6,9 +6,9 @@ internal class Program
     {
         Console.WriteLine("Welcome To User Validation Program!");
         Validation validation = new Validation();
-        validation.ValidateFirstName("Shrikant");
-        validation.ValidateFirstName("om");
-        validation.ValidateFirstName("sai");
-        validation.ValidateFirstName("Ram");
+        validation.ValidateSecondName("Shrikant");
+        validation.ValidateSecondName("om");
+        validation.ValidateSecondName("sai");
+        validation.ValidateSecondName("Ram");
     }
 }
